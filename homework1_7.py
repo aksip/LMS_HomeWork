@@ -18,6 +18,10 @@ print(list3)
 #А это, если хоим именно сложить числа
 list1 = input('Введите список №1: ').split()
 list2 = input('Введите список №2: ').split()
+if len(list1) < len(list2):
+    list1.extend([0,] * (len(list2) - len(list1)))
+else:
+    list2.extend([0,] * (len(list1) - len(list2)))
 list3 = list(map(lambda x, y: x + y, list(map(int, list1)), list(map(int, list2))))
 print(list3)
 
