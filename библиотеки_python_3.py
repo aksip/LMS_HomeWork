@@ -9,6 +9,7 @@ Original file is located at
 
 import pandas as pd
 import numpy as np
+from IPython.display import display
 
 data = {'Name':['Alice', 'Ivat', 'Sasha', 'Evgeny', 'Alex'],
         'Age':[20, 25, 30, 40, 50],
@@ -17,9 +18,10 @@ data = {'Name':['Alice', 'Ivat', 'Sasha', 'Evgeny', 'Alex'],
         'Salary':[100, 110, 120, 130, 140]}
 df = pd.DataFrame(data)
 
+display(df)
+
 df.head(3)
 
 df.tail(3)
 
 df.to_csv('output.csv')
-
